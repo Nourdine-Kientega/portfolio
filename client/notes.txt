@@ -1,0 +1,8 @@
+
+                                            ============ 01/12/2024 ===========
+                    
+=> rm -rf .git; renitialize git configuration
+
+=> npx create-react-app client --template typescript; efre 
+
+=> git rm --cached client;
