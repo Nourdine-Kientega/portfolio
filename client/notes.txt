@@ -6,3 +6,7 @@
 => npx create-react-app client --template typescript; efre 
 
 => git rm --cached client;
+
+=> npm install --save-dev @babel/plugin-proposal-private-property-in-object;
+
+=> npm install scrollreveal typed.js; 
