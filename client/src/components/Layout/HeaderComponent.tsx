@@ -1,13 +1,26 @@
+import { useState } from "react";
 
 export const HeaderComponent = () => {
+
+    const [isActive, setIsActive] = useState(false);
+
+    const handleMenuClick = () => {
+      setIsActive(!isActive); // Bascule l'état actif
+    };
 
   return (
     <header className="header">
         <a href="#" className="logo">Portfolio</a>
 
-        <i className='bx bx-menu' id="menu-icon"></i>
+      {/* Icône du menu */}
+      <i
+        className={`bx ${isActive ? 'bx-x' : 'bx-menu'}`}
+        id="menu-icon"
+        onClick={handleMenuClick}
+      ></i>
 
-        <nav className="navbar">
+      {/* Navigation */}
+      <nav className={`navbar ${isActive ? 'active' : ''}`}>
             <a href="#home" className="active">Home</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
