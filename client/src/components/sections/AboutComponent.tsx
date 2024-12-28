@@ -14,7 +14,7 @@ export const AboutComponent = () => {
                 nulla! Error, tempore vitae officia cum consequatur quae saepe iste blanditiis perferendis 
                 veniam nemo neque cupiditate fugit ab, ad exercitationem possimus! Iure praesentium aliquam quasi 
                 fugiat dolorum quod, corporis rem, cumque non iste animi odit totam quibusdam at et similique id.</p>
-            <a href="#" className="btn">Read more</a>
+            {/* <a href="#" className="btn">Read more</a> */}
         </div>
     </section>
   )

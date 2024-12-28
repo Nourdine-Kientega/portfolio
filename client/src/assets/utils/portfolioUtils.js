@@ -13,7 +13,7 @@ export const initScrollReveal = () => {
 // Fonction pour configurer Typed.js
 export const initTypedJs = (elementSelector) => {
   const typedInstance = new Typed(elementSelector, {
-    strings: ['Frontend Developer', 'Blogger'],
+    strings: ['Développeur Frontend', 'Développeur Backend', 'Développeur Full Stack'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
