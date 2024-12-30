@@ -2,7 +2,7 @@ import { projectsImages } from "../../assets/images";
 
 export const ProjectsComponent = () => {
   return (
-    <section className="portfolio" id="portfolio">
+    <section className="portfolio" id="projects">
         <h2 className="heading">Latest <span>Project</span></h2>
 
         <div className="portfolio-container">

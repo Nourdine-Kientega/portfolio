@@ -43,8 +43,8 @@ export const HeaderComponent = () => {
         <a href="#about">À propos</a>
         <a href="#skills">Compétences</a>
         <a href="#certifications">Certifications</a>
-        <a href="#projects">Projets</a>
         <a href="#services">Services</a>
+        <a href="#projects">Projets</a>
         <a href="#contact">Contact</a>
       </nav>
 

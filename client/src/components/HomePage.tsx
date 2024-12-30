@@ -12,6 +12,8 @@ import { HomeComponent } from "./sections/HomeComponent";
 import { ProjectsComponent } from "./sections/ProjectsComponent";
 import { ServicesComponent } from "./sections/ServicesComponent";
 import { initScrollReveal, initTypedJs } from "../assets/utils/portfolioUtils.js";
+import { SkillsComponent } from "./sections/SkillsComponent";
+import CertificationsComponent from "./sections/CertificationsComponent";
 
 // import '../assets/utils/portfolio.js';
 
@@ -38,6 +40,8 @@ export const HomePage = () => {
     <LayoutComponent>
       <HomeComponent />
       <AboutComponent />
+      <SkillsComponent />
+      <CertificationsComponent />
       <ServicesComponent />
       <ProjectsComponent />
       <ContactComponent />

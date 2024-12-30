@@ -1,4 +1,5 @@
-import ProfilImage from '../../assets/images/profil.jpg'
+import ProfilImage from '../../assets/images/profil.jpg';
+import cv from '../../assets/pdf/cv.pdf';
 
 export const HomeComponent = () => {
   return (
@@ -15,16 +16,19 @@ export const HomeComponent = () => {
                bases de données telles que PostgreSQL et MongoDB.
             </p>
             <div className="social-media">
-                <a href="#" title='Facebook'><i className='bx bxl-facebook' ></i></a>
-                <a href="#" title='WhatsApp'><i className='bx bxl-whatsapp' ></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100084107022127" rel="noopener noreferrer" target='_blank' title='Facebook'><i className='bx bxl-facebook' ></i></a>
+                <a href="https://wa.me/+22674070440" rel="noopener noreferrer" target='_blank' title='WhatsApp'><i className='bx bxl-whatsapp' ></i></a>
                 {/* <a href="#"><i className='bx bxl-twitter' ></i></a> */}
                 {/* <a href="#"><i className='bx bxl-instagram-alt' ></i></a> */}
-                <a href="#" title='LinkedIn'><i className='bx bxl-linkedin' ></i></a>
+                <a href="https://www.linkedin.com/in/nourdine-kientega-6660a8270" rel="noopener noreferrer" target='_blank' title='LinkedIn'><i className='bx bxl-linkedin' ></i></a>
             </div>
-            <a href="https://nourdine-kientega.github.io/cv/" target="_blank" className="btn">View my CV</a>
+            <div className='cv'>
+              <a href={cv} download='CV Kientega Nourdine.pdf' className="btn">Télécharger mon CV</a>
+              <a href="https://nourdine-kientega.github.io/cv/" target="_blank" className="btn">Voir mon CV en ligne</a>
+            </div>
         </div>
         <div className="home-img">
-            <img src={ProfilImage} alt="" />
+            <img src={ProfilImage} alt="Image de présentation" />
         </div>
     </section>
   )
