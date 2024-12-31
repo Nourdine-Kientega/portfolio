@@ -48,12 +48,3 @@ export const HomePage = () => {
     </LayoutComponent>
   )
 };
-
-
-
-// ├── HomeComponent.tsx
-// ├── AboutComponent.tsx
-// ├── SkillsComponent.tsx
-// ├── ServicesComponent.tsx
-// ├── ProjectsComponent.tsx
-// └── ContactComponent.tsx

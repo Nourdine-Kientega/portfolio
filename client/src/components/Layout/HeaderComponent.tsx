@@ -5,22 +5,28 @@ import Slider from "../utils/Slider";
 export const HeaderComponent = () => {
 
     const [isActive, setIsActive] = useState(false);
-    const [language, setLanguage] = useState(true);
+    // const [language, setLanguage] = useState(true);
     const [slide, setSlide] = useState(true);
 
     const handleMenuClick = () => {
       setIsActive(!isActive); // Bascule l'état actif
     };
 
-    const handleChangeLanguage = (state: boolean) => {
+    // const handleChangeLanguage = (state: boolean) => {
 
-      setLanguage(state);
-      console.log(state ? 'FR' : 'EN');
-    };
+    //   setLanguage(state);
+    //   console.log(state ? 'FR' : 'EN');
+    // };
 
     const handleChangeMode = (state: boolean) => {
 
       setSlide(state);
+      if(!state) {
+        document.body.classList.add('light');
+      } else {
+        document.body.classList.remove('light');
+      }
+
       console.log(state ? 'Dark' : 'Light');
     };
 
@@ -38,8 +44,9 @@ export const HeaderComponent = () => {
       ></i>
 
       {/* Navigation */}
+      
       <nav className={`navbar ${isActive ? 'active' : ''}`}>
-        <a href="#home" className="active">Accueil</a>
+        <a href="#home">Accueil</a>
         <a href="#about">À propos</a>
         <a href="#skills">Compétences</a>
         <a href="#certifications">Certifications</a>
@@ -51,7 +58,7 @@ export const HeaderComponent = () => {
         {/* Sliders */}
       <div className="sliders">
         {/* <Slider isSlided={language} options={['FR', 'EN']} onChangeValue={(e) => handleChangeLanguage(e)} /> */}
-        <Slider isSlided={slide} options={['Dark', 'Lght']} onChangeValue={(e) => handleChangeMode(e)}/>
+        <Slider isSlided={slide} options={['Dark', 'Light']} onChangeValue={(e) => handleChangeMode(e)}/>
       </div>
     </header>
   )
