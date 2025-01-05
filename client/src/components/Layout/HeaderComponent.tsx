@@ -5,18 +5,11 @@ import Slider from "../utils/Slider";
 export const HeaderComponent = () => {
 
     const [isActive, setIsActive] = useState(false);
-    // const [language, setLanguage] = useState(true);
     const [slide, setSlide] = useState(true);
 
     const handleMenuClick = () => {
       setIsActive(!isActive); // Bascule l'état actif
     };
-
-    // const handleChangeLanguage = (state: boolean) => {
-
-    //   setLanguage(state);
-    //   console.log(state ? 'FR' : 'EN');
-    // };
 
     const handleChangeMode = (state: boolean) => {
 
@@ -44,7 +37,6 @@ export const HeaderComponent = () => {
       ></i>
 
       {/* Navigation */}
-      
       <nav className={`navbar ${isActive ? 'active' : ''}`}>
         <a href="#home">Accueil</a>
         <a href="#about">À propos</a>
@@ -57,7 +49,6 @@ export const HeaderComponent = () => {
 
         {/* Sliders */}
       <div className="sliders">
-        {/* <Slider isSlided={language} options={['FR', 'EN']} onChangeValue={(e) => handleChangeLanguage(e)} /> */}
         <Slider isSlided={slide} options={['Dark', 'Light']} onChangeValue={(e) => handleChangeMode(e)}/>
       </div>
     </header>

@@ -18,7 +18,6 @@ export const AboutComponent = () => {
               tant en frontend qu'en backend, afin de devenir un expert capable de gérer tous les aspects d'un projet web. J'aime relever des 
               défis techniques et travailler sur des projets variés qui me permettent d'élargir mes compétences tout en contribuant à l'innovation numérique.
             </p>
-            {/* <a href="#" className="btn">Read more</a> */}
         </div>
     </section>
   )

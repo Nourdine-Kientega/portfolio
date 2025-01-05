@@ -12,7 +12,6 @@ export const ServicesComponent = () => {
                     d’interfaces modernes et intuitives, je maîtrise des technologies comme HTML, CSS, JavaScript et React.js, 
                     ce qui me permet de concevoir des sites responsives et optimisés pour l’utilisateur.
                 </p>
-                {/* <a href="#" className="btn">Read more</a> */}
             </div>
             <div className="services-box">
                 <i className='bx bx-code-alt' ></i>
@@ -22,7 +21,6 @@ export const ServicesComponent = () => {
                     PostgreSQL. Bien que je continue à approfondir mes compétences, je suis capable de développer des fonctionnalités 
                     solides et sécurisées pour répondre aux besoins des projets web.
                 </p>
-                {/* <a href="#" className="btn">Read more</a> */}
             </div>
             <div className="services-box">
                 <i className='bx bx-bar-chart' ></i>
@@ -31,7 +29,6 @@ export const ServicesComponent = () => {
                 <p>
                     Je m’intéresse également au design graphique, où j’utilise des outils de la suite Adobe, en particulier Photoshop, pour concevoir des designs visuels. Bien que je sois encore en apprentissage dans ce domaine, je suis motivé à répondre à des besoins créatifs simples tout en perfectionnant mes compétences.
                 </p>
-                {/* <a href="#" className="btn">Read more</a> */}
             </div>
         </div>
     </section>

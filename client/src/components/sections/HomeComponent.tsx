@@ -18,8 +18,6 @@ export const HomeComponent = () => {
             <div className="social-media">
                 <a href="https://www.facebook.com/profile.php?id=100084107022127" rel="noopener noreferrer" target='_blank' title='Facebook'><i className='bx bxl-facebook' ></i></a>
                 <a href="https://wa.me/+22674070440" rel="noopener noreferrer" target='_blank' title='WhatsApp'><i className='bx bxl-whatsapp' ></i></a>
-                {/* <a href="#"><i className='bx bxl-twitter' ></i></a> */}
-                {/* <a href="#"><i className='bx bxl-instagram-alt' ></i></a> */}
                 <a href="https://www.linkedin.com/in/nourdine-kientega-6660a8270" rel="noopener noreferrer" target='_blank' title='LinkedIn'><i className='bx bxl-linkedin' ></i></a>
             </div>
             <div className='cv'>
