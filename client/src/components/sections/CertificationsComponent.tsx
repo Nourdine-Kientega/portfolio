@@ -22,6 +22,7 @@ const CertificationsComponent = () => {
             <img src={certificationsImages.sololearn_SQL} alt="Sololearn SQL certificate" />
           </div>
 
+
         </div>
     </section>
   )

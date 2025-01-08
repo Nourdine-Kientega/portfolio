@@ -10,7 +10,7 @@ export const SkillsComponent = () => {
       </p>
       <div className="skills-container">
         <div className="skills-box">
-          <img src={skillsImages.JavaScript} alt="HTML image" />
+          <img className="js_rounded" src={skillsImages.JavaScript} alt="JavaScript image" />
           <h3>JavaScript</h3>
         </div>
 
