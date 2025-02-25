@@ -1,4 +1,4 @@
-import { DefaultAssets } from "../assets";
+import { DefaultAssets } from "../../assets";
 
 export const HeroSection = () => {
   return (

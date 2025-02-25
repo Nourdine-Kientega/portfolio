@@ -1,4 +1,4 @@
-import { SkillsImages } from "../assets";
+import { SkillsImages } from "../../assets";
 
 export const SkillsSection = () => {
   return (

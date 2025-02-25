@@ -1,4 +1,5 @@
-import '../assets/styles/portfolio.css';
+// import '../assets/styles/portfolio.css';
+import '../../assets/styles/portfolio.css';
 
 // Page sections
 import { HeroSection } from "../sections/HeroSection";

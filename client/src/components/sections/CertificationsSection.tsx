@@ -1,4 +1,4 @@
-import { CertificationsImages } from "../assets";
+import { CertificationsImages } from "../../assets";
 
 export const CertificationsSection = () => {
   return (

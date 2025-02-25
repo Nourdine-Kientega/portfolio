@@ -1,4 +1,7 @@
-import { DefaultAssets } from "../assets";
+// import { DefaultAssets } from "../assets";
+
+import { DefaultAssets } from "../../assets";
+import { ThemeSwitcher } from "../utils/ThemeSwitcher";
 
 export const HeaderComponent = () => {
   return (
@@ -18,6 +21,9 @@ export const HeaderComponent = () => {
         <a href="#projects">Projets</a>
         <a href="#contact">Contact</a>
       </nav>
+
+      {/* Dark / Light mode */}
+      <ThemeSwitcher />
     </header>
   );
 };
