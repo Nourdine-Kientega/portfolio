@@ -8,7 +8,7 @@ export const FooterComponent = () => {
         </p>
       </div>
       <div className="footer-iconTop">
-        <a href="#home">
+        <a href="#hero">
           <i className="bx bx-up-arrow-alt"></i>
         </a>
       </div>
