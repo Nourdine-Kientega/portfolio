@@ -1,5 +1,11 @@
-function main() {
-    console.log('Hi Nourdine  this is new server for my portfolio!')
-}
+const express = require('express');
 
-main();
+const app = express();
+const port = process.env.PORT || 5000;
+
+app.get('/', (req, res) => {
+
+    res.send("Welcome to my portfolio backend interface");
+}); 
+ 
+app.listen(port, () => console.log(`Server is running on port http://localhost:${port}`));
