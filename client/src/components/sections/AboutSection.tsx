@@ -4,7 +4,7 @@ export const AboutSection = () => {
   return (
     <section className="about" id="about">
       <div className="about-img">
-        <img src={DefaultAssets.aboutImg} alt="" />
+        <img src={DefaultAssets.aboutImg} alt="Image de la section a propos de moi" />
       </div>
 
       <div className="about-content">

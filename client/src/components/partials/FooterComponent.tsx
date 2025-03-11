@@ -7,7 +7,7 @@ export const FooterComponent = () => {
           réservés.
         </p>
       </div>
-      <div className="footer-iconTop">
+      <div className="scroll-to-top">
         <a href="#hero">
           <i className="bx bx-up-arrow-alt"></i>
         </a>
