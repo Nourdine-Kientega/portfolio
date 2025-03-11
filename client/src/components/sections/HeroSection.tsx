@@ -1,4 +1,6 @@
 import { DefaultAssets } from "../../assets";
+import { CVLink } from "../items/cvLink";
+import { SocialMediaLink } from "../items/SocialMediaLink";
 
 export const HeroSection = () => {
   return (
@@ -19,51 +21,23 @@ export const HeroSection = () => {
           je travaille avec des outils comme Node.js et des bases de données
           telles que PostgreSQL et MongoDB.
         </p>
+
+        {/* Social media links */}
         <div className="social-media">
-          <a
-            href="https://www.facebook.com/profile.php?id=100084107022127"
-            rel="noopener noreferrer"
-            target="_blank"
-            title="Facebook"
-          >
-            <i className="bx bxl-facebook"></i>
-          </a>
-          <a
-            href="https://wa.me/+22674070440"
-            rel="noopener noreferrer"
-            target="_blank"
-            title="WhatsApp"
-          >
-            <i className="bx bxl-whatsapp"></i>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/nourdine-kientega-6660a8270"
-            rel="noopener noreferrer"
-            target="_blank"
-            title="LinkedIn"
-          >
-            <i className="bx bxl-linkedin"></i>
-          </a>
+          <SocialMediaLink href="https://www.facebook.com/profile.php?id=100084107022127" title="Facebook" iconClassName="bx bxl-facebook" />
+          <SocialMediaLink href="https://wa.me/+22674070440" title="WhatsApp" iconClassName="bx bxl-whatsapp" />
+          <SocialMediaLink href="https://www.linkedin.com/in/nourdine-kientega-6660a8270" title="LinkedIn" iconClassName="bx bxl-linkedin" />
         </div>
+
+        {/* cv links */}
         <div className="cv">
-          <a
-            href={DefaultAssets.cv}
-            download="CV Kientega Nourdine.pdf"
-            className="btn"
-          >
-            Télécharger mon CV
-          </a>
-          <a
-            href="https://nourdine-kientega.github.io/cv/"
-            target="_blank"
-            className="btn"
-          >
-            Voir mon CV en ligne
-          </a>
+          <CVLink href={DefaultAssets.cv} downloadTitle="CV Kientega Nourdine.pdf" label="Télécharger mon CV" />
+          <CVLink href={'https://nourdine-kientega.github.io/cv/'} label="Voir mon CV en ligne" />
         </div>
+
       </div>
       <div className="hero-img">
-        <img src={DefaultAssets.Profil} alt="Image de présentation" />
+        <img src={DefaultAssets.Profil} alt="Image de Nourdine Kientega" />
       </div>
     </section>
   );

@@ -75,7 +75,6 @@ export const ContactSection = () => {
             placeholder="Le sujet de votre message (facultatif)"
             value={formData.subject}
             onChange={handleChange}
-            required
           />
         </div>
         <textarea

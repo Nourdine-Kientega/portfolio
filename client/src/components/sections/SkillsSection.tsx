@@ -1,6 +1,20 @@
 import { SkillsImages } from "../../assets";
+import { SkillItem } from "../items/SkillItem";
 
 export const SkillsSection = () => {
+
+  const skills = Object.entries(SkillsImages).map(([key, src]) => {
+    const skillName = key.replace("_", " "); // Format name
+    const roundedImages = ["JavaScript"];
+    return {
+      src,
+      alt: `${skillName} logo`,
+      label: skillName,
+      imgClassName: roundedImages.includes(key) ? "rounded" : "",
+    };
+  });
+
+
   return (
     <section className="skills" id="skills">
       <h2 className="heading">
@@ -13,51 +27,14 @@ export const SkillsSection = () => {
         j’utilise régulièrement dans mes projets et sur lesquelles je cherche à
         évoluer constamment.
       </p>
+
+      {/* Skills items */}
       <div className="skills-container">
-        <div className="skills-box">
-          <img
-            className="js_rounded"
-            src={SkillsImages.JavaScript}
-            alt="JavaScript image"
-          />
-          <h3>JavaScript</h3>
-        </div>
-
-        <div className="skills-box">
-          <img src={SkillsImages.TypeScript} alt="HTML image" />
-          <h3>TypeScript</h3>
-        </div>
-
-        <div className="skills-box">
-          <img src={SkillsImages.React} alt="HTML image" />
-          <h3>React.js</h3>
-        </div>
-
-        <div className="skills-box">
-          <img src={SkillsImages.React_native} alt="HTML image" />
-          <h3>React Native</h3>
-        </div>
-
-        <div className="skills-box">
-          <img src={SkillsImages.Nodejs} alt="HTML image" />
-          <h3>Node.js</h3>
-        </div>
-
-        <div className="skills-box">
-          <img src={SkillsImages.GitHub} alt="HTML image" />
-          <h3>Git/GitHub</h3>
-        </div>
-
-        <div className="skills-box">
-          <img src={SkillsImages.MySQL} alt="HTML image" />
-          <h3>MySQL</h3>
-        </div>
-
-        <div className="skills-box">
-          <img src={SkillsImages.MongoDB} alt="HTML image" />
-          <h3>MongoDB</h3>
-        </div>
+        {skills.map((skill, index) => (
+          <SkillItem key={index} {...skill} />
+        ))}
       </div>
+
     </section>
   );
 };

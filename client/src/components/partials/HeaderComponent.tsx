@@ -1,4 +1,3 @@
-// import { DefaultAssets } from "../assets";
 
 import { useEffect, useState } from "react";
 import { DefaultAssets } from "../../assets";
