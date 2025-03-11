@@ -16,9 +16,9 @@ export const transporter = nodemailer.createTransport({
 // Mail configuration status
 transporter.verify((error, success) => {
     if (error) {
-      console.error('🚨 Erreur de configuration du serveur mail:', error.message);
+      console.error('🚨 Mail server configuration error:', error.message);
       process.exit(1); // stop process
     } else {
-      console.log('✅ Serveur mail configuré correctement et prêt à envoyer des emails');
+      console.log('✅ Mail server configured correctly and ready to send emails');
     }
 });
