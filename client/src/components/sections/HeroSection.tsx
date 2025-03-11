@@ -24,9 +24,9 @@ export const HeroSection = () => {
 
         {/* Social media links */}
         <div className="social-media">
-          <SocialMediaLink href="https://www.facebook.com/profile.php?id=100084107022127" title="Facebook" iconClassName="bx bxl-facebook" />
-          <SocialMediaLink href="https://wa.me/+22674070440" title="WhatsApp" iconClassName="bx bxl-whatsapp" />
-          <SocialMediaLink href="https://www.linkedin.com/in/nourdine-kientega-6660a8270" title="LinkedIn" iconClassName="bx bxl-linkedin" />
+          <SocialMediaLink href="/socialmedia/facebook/" title="Facebook" iconClassName="bx bxl-facebook" />
+          <SocialMediaLink href="/socialmedia/whatsapp/" title="WhatsApp" iconClassName="bx bxl-whatsapp" />
+          <SocialMediaLink href="/socialmedia/linkedin/" title="LinkedIn" iconClassName="bx bxl-linkedin" />
         </div>
 
         {/* cv links */}

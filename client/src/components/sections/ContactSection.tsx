@@ -14,7 +14,7 @@ export const ContactSection = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('/server/contact/', {
+      const response = await fetch('/api/contact/', {
         headers: { 'Content-Type': 'application/json' },
         method: 'POST',
         body: JSON.stringify(formData),
