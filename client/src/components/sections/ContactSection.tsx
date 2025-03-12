@@ -22,6 +22,8 @@ export const ContactSection = () => {
 
       if(response.ok) {
         alert('Message envoyé avec succès !');
+        console.log(await response.json());
+        
         setFormData({ firstname: '', lastname: '', email: '', subject: '', message: '' });
       }else {
         const errorText = await response.text();
