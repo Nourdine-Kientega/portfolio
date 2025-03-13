@@ -1,16 +1,22 @@
 import { transporter } from "../config/mailConfig";
 
-export const sendMail = async (name, email, subject, message) => {
+interface sendMailProps {
+    firstname: string;
+    lastname: string;
+    email: string;
+    subject: string;
+    message: string;
+};
 
-    const senderName = name || 'Anonyme'; // Fallback if name is not provided
-    const senderEmail = email;
+export const sendMail = async ({firstname, lastname, email, subject, message}: sendMailProps) => {
 
     // Mail for my destination
     const mailOptions = {
 
-        from: `"${senderName}"<${senderEmail}>`,
+        from: `"${firstname} ${lastname} "<${email}>`,
         to: process.env.EMAIL_USER,
-        subject: subject === '' ? `Message de ${name} via le formulaire de contact de mon portfolio`: subject,
+        replyTo: email,
+        subject: subject === '' ? `Message de ${firstname} ${lastname} via le formulaire de contact de mon portfolio`: subject,
         text: message,
     }
 
@@ -22,7 +28,7 @@ export const sendMail = async (name, email, subject, message) => {
         from: process.env.EMAIL_USER,
         to: email,
         subject: 'Confirmation de réception de votre message',
-        text: `Bonjour ${name},\n\nMerci pour votre message ! Nous avons bien reçu votre demande et nous y répondrons rapidement.\n\nCordialement,\nMon Nom`,
+        text: `Bonjour ${firstname} ${lastname},\n\nMerci pour votre message ! Nous j'ai bien reçu votre demande et je vouz y répondrai le plus vite possible.\n\nCordialement,\nKientega Baskonwende Nourdine`,
     }
 
     await transporter.sendMail(userMailOptions);

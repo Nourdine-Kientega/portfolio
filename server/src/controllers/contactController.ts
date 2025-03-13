@@ -7,7 +7,7 @@ export const sendContactMessage = async (req, res) => {
     
     try {
         // Send the contact message to nodemailer
-        await sendMail(`${firstname} ${lastname}`, email, subject, message);
+        await sendMail(req.body);
 
         const query = `INSERT INTO contact_messages(firstname, lastname, email, subject, message) VALUES ($1, $2, $3, $4, $5) RETURNING created_at;`;
         const value = [ firstname, lastname, email, subject, message ];

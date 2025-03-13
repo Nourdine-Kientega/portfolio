@@ -32,15 +32,12 @@ export const ContactSection = () => {
 
       const data = await response.json();
 
-      // setFormData({ firstname: '', lastname: '', email: '', subject: '', message: '' });
-
       if(response.ok) {
         setNotification({
           type: 'success',
           title: 'Thank you for contacting me!',
           description: 'Votre message a été envoyé avec succès ! Vous recevrez une réponse dès que possible.',
         });
-        // setFormData({ firstname: '', lastname: '', email: '', subject: '', message: '' });
       } else if (data.emailExists) {
         setNotification({
             type: 'error',
@@ -48,8 +45,8 @@ export const ContactSection = () => {
             description: 'L\'email que vous avez fourni est déjà enregistré. Veuillez en utiliser un autre.',
         });
     } else {
-        const errorText = await response.text();
-        console.error('Server error:', errorText);
+        // const errorText = await response.text();
+        console.error('Server error:', response);
         setNotification({
           type: 'error',
           title: 'Error',
