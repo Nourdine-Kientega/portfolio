@@ -1,8 +1,15 @@
 import { FormEvent, useState } from "react";
+import PanelComponent from "../utils/Panel";
 
 export const ContactSection = () => {
 
   const [formData, setFormData] = useState({ firstname: '', lastname: '', email: '', subject: '', message: '' });
+  const [loading, setLoading] = useState(false);
+  const [notification, setNotification] = useState<{ type: 'success' | 'error'; title: string; description: string } | null>(null);
+
+  const closeNotification = () => {
+    setNotification(null);
+  };
 
   const handleChange = (e: any) => {
 
@@ -11,7 +18,10 @@ export const ContactSection = () => {
   };
 
   const handleSubmit = async (e: FormEvent) => {
+
     e.preventDefault();
+    setLoading(true);
+    setNotification(null);
 
     try {
       const response = await fetch('/api/contact/', {
@@ -20,21 +30,44 @@ export const ContactSection = () => {
         body: JSON.stringify(formData),
       });
 
+      const data = await response.json();
+
+      // setFormData({ firstname: '', lastname: '', email: '', subject: '', message: '' });
+
       if(response.ok) {
-        alert('Message envoyé avec succès !');
-        console.log(await response.json());
-        
-        setFormData({ firstname: '', lastname: '', email: '', subject: '', message: '' });
-      }else {
+        setNotification({
+          type: 'success',
+          title: 'Thank you for contacting me!',
+          description: 'Votre message a été envoyé avec succès ! Vous recevrez une réponse dès que possible.',
+        });
+        // setFormData({ firstname: '', lastname: '', email: '', subject: '', message: '' });
+      } else if (data.emailExists) {
+        setNotification({
+            type: 'error',
+            title: 'Email Already Exists',
+            description: 'L\'email que vous avez fourni est déjà enregistré. Veuillez en utiliser un autre.',
+        });
+    } else {
         const errorText = await response.text();
-        console.error('Erreur serveur:', errorText);
-        throw new Error(`Erreur serveur: ${response.status} - ${errorText}`);
+        console.error('Server error:', errorText);
+        setNotification({
+          type: 'error',
+          title: 'Error',
+          description: 'Une erreur est survenue lors de l\'envoi de votre message. Veuillez réessayer.',
+        });
       }
       
     } catch (error) {
-      console.error('Erreur réseau:', error);
+      console.error('Network error:', error);
+      setNotification({
+        type: 'error',
+        title: 'Network Error',
+        description: 'Une erreur réseau est survenue. Veuillez vérifier votre connexion et réessayer.',
+      });
+    } finally {
+      setFormData({ firstname: '', lastname: '', email: '', subject: '', message: '' });
+      setLoading(false);
     }
-
   };
 
   return (
@@ -42,6 +75,23 @@ export const ContactSection = () => {
       <h2 className="heading">
         Me <span>Contacter!</span>
       </h2>
+
+      {loading && (
+        <div className="overlay">
+          <div className="spinner"></div>
+        </div>
+      )}
+
+{notification && (
+        <div className="overlay">
+          <PanelComponent
+            type={notification.type}
+            title={notification.title}
+            description={notification.description}
+            onClose={closeNotification}
+          />
+        </div>
+      )}
 
       <form >
         <div className="input-box">
@@ -91,6 +141,7 @@ export const ContactSection = () => {
         ></textarea>
         <input type="submit" value="Envoyer votre message" className="btn" />
       </form>
+
     </section>
   );
 };
