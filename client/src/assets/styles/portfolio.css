@@ -138,8 +138,9 @@ span { color: var(--main-color); }
 .form-panel .content { margin: 14px 0; text-align: center; font-size: 14px; }
 .form-panel .panel-btn { width: 98%; font-size: 16px; padding: 10px; border: none; outline: none; margin: auto; margin-top: 10px; color: #fff; border-radius: 5px; cursor: pointer; }
 .form-panel.success .panel-btn { background: green; }
-.form-panel.error .content { margin-top: 18px; }
-.form-panel.error .panel-btn { background: red; margin-top: 20px; }
+.form-panel.error .title { margin-top: 40px; }
+.form-panel.error .content { margin-top: 20px; }
+.form-panel.error .panel-btn { background: red; margin-top: 30px; }
 
                                        /************** Animations section **************/
 

@@ -30,7 +30,6 @@ export const ContactSection = () => {
         body: JSON.stringify(formData),
       });
 
-      const data = await response.json();
 
       if(response.ok) {
         setNotification({
@@ -38,13 +37,7 @@ export const ContactSection = () => {
           title: 'Merci de m\'avoir contacté !',
           description: 'Votre message a été envoyé avec succès, Vous recevrez une réponse dès que possible.',
         });
-      } else if (data.emailExists) {
-        setNotification({
-            type: 'error',
-            title: 'L\'adresse e-mail existe déjà',
-            description: 'L\'email que vous avez fourni est déjà enregistré. Veuillez en utiliser un autre.',
-        });
-    } else {
+      }else {
         // const errorText = await response.text();
         // console.error('Server error:', response);
         setNotification({

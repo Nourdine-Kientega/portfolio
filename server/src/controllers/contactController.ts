@@ -26,16 +26,7 @@ export const sendContactMessage = async (req, res) => {
 
     } catch (error) {
 
-        if (error.code === '23505') {
-            res.status(409).json({
-                error: 'This email already exists in our database.',
-                emailExists: true  // Send a flag to indicate email duplication
-            });
-        } else {
-            console.error('Error processing contact message:', error);
-            res.status(500).json({ error: 'An error occurred while processing your message.' });
-        }
-
-        // res.status(500).json({ error: 'An error occurred while processing your message.' });
+        console.error('Error processing contact message:', error);
+        res.status(500).json({ error: 'An error occurred while processing your message.' });
     }
 };

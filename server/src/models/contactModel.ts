@@ -11,7 +11,7 @@ export const createTables = async () => {
         id SERIAL PRIMARY KEY,
         firstname VARCHAR(100) NOT NULL,
         lastname VARCHAR(100) NOT NULL,
-        email VARCHAR(255) UNIQUE NOT NULL,
+        email VARCHAR(255) NOT NULL,
         subject VARCHAR(255) NOT NULL,
         message TEXT NOT NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP 
