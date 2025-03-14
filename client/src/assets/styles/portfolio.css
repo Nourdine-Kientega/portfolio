@@ -128,137 +128,25 @@ span { color: var(--main-color); }
 .scroll-to-top a:hover { box-shadow: 0 0 1rem var(--main-color); }
 .scroll-to-top a i { font-size: 2.4rem; color: var(--second-bg-color); }
 
+                                       /************** Form spinner and panel section **************/
 
-
-
-
-
-
-
-
-/* ContactSection.css */
-
-/* Full-screen overlay */
-/* .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-  } */
-  
-  /* Spinner animation */
-  /* .spinner {
-    border: 8px solid var(--second-bg-color);
-    border-top: 8px solid var(--main-color);
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    animation: spin 1s linear infinite;
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  } */
-  
-  /* Success message styling */
-  /* .form-panel {
-    padding: 20px;
-    background-color: var(--second-bg-color);
-    color: var(--text-color);
-    border: 2px solid var(--main-color);
-    border-radius: 8px;
-    text-align: center;
-    font-size: 1.2em;
-  }
-
-  .form-panel.success {
-    background-color: var(--success-bg-color);
-  }
-  
-  .form-panel.error {
-    background-color: var(--error-bg-color);
-  } */
-
-
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-  }
-  
-  /* Spinner */
-  .spinner {
-    border: 8px solid var(--second-bg-color);
-    border-top: 8px solid var(--main-color);
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    animation: spin 1s linear infinite;
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  
-  /* Panel Component */
-  .panel {
-    width: 200px;
-    padding: 20px;
-    background-color: #fff;
-    color: #000;
-    border-radius: 8px;
-    text-align: center;
-    position: relative;
-  }
-  
-  .panel-icon {
-    font-size: 2em;
-    position: absolute;
-    top: -25px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #fff;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .panel.success .panel-icon {
-    color: green;
-  }
-
-  .panel.error .panel-icon {
-    color: yellow;
-  }
-  
-  /* .panel.error .panel */
-  /* ::contentReference[oaicite:0]{index=0} */
-
-
-
-
-
-
+.overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); display: flex; justify-content: center; align-items: center; z-index: 9999; }
+.spinner { border: 8px solid var(--second-bg-color); border-top: 8px solid var(--main-color); border-radius: 50%; width: 60px; height: 60px; animation: spin 1s linear infinite; }
+.form-panel { width: 300px; height: 250px; background: #fff; border-radius: 10px; padding: 20px; position: relative; color: #000; }
+.form-panel .icon { width: 80px; height: 80px; position: absolute; top: -15%; left: 50%; transform: translateX(-50%); }
+.form-panel .title { margin: 30px 0 10px; text-align: center; font-size: 22px; } 
+.form-panel .content { margin: 14px 0; text-align: center; font-size: 14px; }
+.form-panel .panel-btn { width: 98%; font-size: 16px; padding: 10px; border: none; outline: none; margin: auto; margin-top: 10px; color: #fff; border-radius: 5px; cursor: pointer; }
+.form-panel.success .panel-btn { background: green; }
+.form-panel.error .content { margin-top: 18px; }
+.form-panel.error .panel-btn { background: red; margin-top: 20px; }
 
                                        /************** Animations section **************/
+
+@keyframes spin { 
+  0% { transform: rotate(0deg); } 
+  100% { transform: rotate(360deg); } 
+}
 
 @keyframes floatImage {
     0%{ transform: translateY(0); }

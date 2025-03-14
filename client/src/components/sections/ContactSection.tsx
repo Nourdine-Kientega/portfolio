@@ -35,21 +35,21 @@ export const ContactSection = () => {
       if(response.ok) {
         setNotification({
           type: 'success',
-          title: 'Thank you for contacting me!',
-          description: 'Votre message a été envoyé avec succès ! Vous recevrez une réponse dès que possible.',
+          title: 'Merci de m\'avoir contacté !',
+          description: 'Votre message a été envoyé avec succès, Vous recevrez une réponse dès que possible.',
         });
       } else if (data.emailExists) {
         setNotification({
             type: 'error',
-            title: 'Email Already Exists',
+            title: 'L\'adresse e-mail existe déjà',
             description: 'L\'email que vous avez fourni est déjà enregistré. Veuillez en utiliser un autre.',
         });
     } else {
         // const errorText = await response.text();
-        console.error('Server error:', response);
+        // console.error('Server error:', response);
         setNotification({
           type: 'error',
-          title: 'Error',
+          title: 'Erreur',
           description: 'Une erreur est survenue lors de l\'envoi de votre message. Veuillez réessayer.',
         });
       }
@@ -58,7 +58,7 @@ export const ContactSection = () => {
       console.error('Network error:', error);
       setNotification({
         type: 'error',
-        title: 'Network Error',
+        title: 'Problème de réseau',
         description: 'Une erreur réseau est survenue. Veuillez vérifier votre connexion et réessayer.',
       });
     } finally {
