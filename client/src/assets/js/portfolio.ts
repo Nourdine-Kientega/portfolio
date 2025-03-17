@@ -14,7 +14,7 @@ export const initScrollReveal = () => {
 // Multiple text animation
 export const initTypedJs = (elementSelector: string) => {
     const typedInstance = new Typed(elementSelector, {
-      strings: ['Développeur Frontend', 'Développeur Backend', 'Développeur Full Stack'],
+      strings: ['Développeur Web', 'Développeur Full Stack', 'Développeur Mobile'],
       typeSpeed: 100,
       backSpeed: 100,
       backDelay: 1000,

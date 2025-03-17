@@ -14,6 +14,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,
+    host: '0.0.0.0', // permit other connexion like phone http://ipadress:portnumber
     proxy: {
       '/socialmedia': { ...proxyOptions },
       '/api': {

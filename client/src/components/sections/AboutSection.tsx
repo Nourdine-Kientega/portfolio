@@ -11,7 +11,7 @@ export const AboutSection = () => {
         <h2 className="heading">
           À propos de <span>moi</span>
         </h2>
-        <h3>Développeur Full Stack Junior</h3>
+        <h3>Développeur Full Stack</h3>
         <p>
           Je me suis lancé dans l'apprentissage du développement web avec une
           approche pratique et autodidacte. Depuis le début de mon parcours, je
@@ -19,9 +19,9 @@ export const AboutSection = () => {
           et en backend, ce qui me permet de travailler sur des projets de bout
           en bout. <br />
           Mon objectif à long terme est de continuer à évoluer en tant que
-          développeur full-stack, en approfondissant mes connaissances tant en
-          frontend qu'en backend, afin de devenir un expert capable de gérer
-          tous les aspects d'un projet web. J'aime relever des défis techniques
+          développeur full-stack, en approfondissant mes connaissances, 
+          afin de devenir un expert capable de gérer
+          tous les aspects d'un projet. J'aime relever des défis techniques
           et travailler sur des projets variés qui me permettent d'élargir mes
           compétences tout en contribuant à l'innovation numérique.
         </p>

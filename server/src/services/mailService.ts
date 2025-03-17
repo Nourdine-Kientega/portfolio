@@ -28,7 +28,7 @@ export const sendMail = async ({firstname, lastname, email, subject, message}: s
         from: process.env.EMAIL_USER,
         to: email,
         subject: 'Confirmation de réception de votre message',
-        text: `Bonjour ${firstname} ${lastname},\n\nMerci pour votre message ! Nous j'ai bien reçu votre demande et je vouz y répondrai le plus vite possible.\n\nCordialement,\nKientega Baskonwende Nourdine`,
+        text: `Bonjour ${firstname} ${lastname},\n\nMerci pour votre message ! J'ai bien reçu votre demande et je vous y répondrai le plus vite possible.\n\nCordialement,\nKientega Baskonwende Nourdine`,
     }
 
     await transporter.sendMail(userMailOptions);

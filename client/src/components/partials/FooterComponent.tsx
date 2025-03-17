@@ -3,7 +3,7 @@ export const FooterComponent = () => {
     <footer className="footer">
       <div className="footer-text">
         <p>
-          Droits d'auteur &copy; 2025 par Nourdine Kientega | Tous droits
+          Droits d'auteur &copy; { new Date().getFullYear() } par Nourdine Kientega | Tous droits
           réservés.
         </p>
       </div>

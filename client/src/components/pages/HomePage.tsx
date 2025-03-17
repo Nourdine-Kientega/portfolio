@@ -1,9 +1,6 @@
-// import '../assets/styles/portfolio.css';
-// Assets
 import '../../assets/styles/portfolio.css';
 import { initScrollReveal, initTypedJs } from '../../assets/js/portfolio';
 
-// Page sections
 import { HeroSection } from "../sections/HeroSection";
 import { AboutSection } from "../sections/AboutSection";
 import { SkillsSection } from "../sections/SkillsSection";

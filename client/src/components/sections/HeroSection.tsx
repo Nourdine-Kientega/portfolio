@@ -12,14 +12,9 @@ export const HeroSection = () => {
           et je suis <span className="multiple-text"></span>
         </h3>
         <p>
-          Je suis un développeur full stack junior en auto-formation, je
-          travaille principalement en frontend et backend, et je m'efforce de
-          toujours améliorer mes compétences pour offrir des solutions complètes
-          et bien structurées. En tant que développeur frontend, je maîtrise des
-          technologies comme HTML, CSS, JavaScript, et React, me permettant de
-          créer des interfaces utilisateurs modernes et réactives. Côté backend,
-          je travaille avec des outils comme Node.js et des bases de données
-          telles que PostgreSQL et MongoDB.
+          Développeur Full Stack en auto-formation, je construis des projets concrets en frontend 
+          et backend. Toujours en quête d’amélioration, j’apprends en pratiquant 
+          pour créer des solutions efficaces et bien structurées.
         </p>
 
         {/* Social media links */}

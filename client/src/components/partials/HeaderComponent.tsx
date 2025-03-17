@@ -7,7 +7,16 @@ export const HeaderComponent = () => {
 
   const [activeSection, setActiveSection] = useState("");
 
+  const [menuIsActive, SetMenuIsActive] = useState(false);
+  
+  const handleClickMenu = () => {
+
+    document.querySelector(".navbar")?.classList.toggle('active');
+    SetMenuIsActive(!menuIsActive);
+  };
+
   useEffect(() => {
+
     const handleScroll = () => {
       const sections = document.querySelectorAll("section");
       let currentSection = "";
@@ -46,8 +55,13 @@ export const HeaderComponent = () => {
       <a href="#contact" className={activeSection === "contact" ? "active" : ""}>Contact</a>
     </nav>
 
+      <div className="menu-theme">
+        <ThemeSwitcher themes={['dark', 'light']}/>
+
+        {/* Menu icon */}
+        <i className={menuIsActive ? 'menu-icon bx bx-x close-icon' : "menu-icon bx bx-menu"} onClick={() => handleClickMenu()}></i>
+      </div>
       {/* Dark / Light mode */}
-      <ThemeSwitcher themes={['dark', 'light']}/>
     </header>
   );
 };
