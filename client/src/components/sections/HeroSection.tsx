@@ -3,6 +3,7 @@ import { CVLink } from "../items/CVLink";
 import { SocialMediaLink } from "../items/SocialMediaLink";
 
 export const HeroSection = () => {
+
   return (
     <section className="hero" id="hero">
       <div className="hero-content">
@@ -19,14 +20,14 @@ export const HeroSection = () => {
 
         {/* Social media links */}
         <div className="social-media">
-          <SocialMediaLink href="/socialmedia/facebook/" title="Facebook" iconClassName="bx bxl-facebook" />
-          <SocialMediaLink href="/socialmedia/whatsapp/" title="WhatsApp" iconClassName="bx bxl-whatsapp" />
-          <SocialMediaLink href="/socialmedia/linkedin/" title="LinkedIn" iconClassName="bx bxl-linkedin" />
+          <SocialMediaLink href={`socialmedia/facebook/`} title="Facebook" iconClassName="bx bxl-facebook" />
+          <SocialMediaLink href={`socialmedia/whatsapp/`} title="WhatsApp" iconClassName="bx bxl-whatsapp" />
+          <SocialMediaLink href={`socialmedia/linkedin/`} title="LinkedIn" iconClassName="bx bxl-linkedin" />
         </div>
 
         {/* cv links */}
         <div className="cv">
-          <CVLink href={DefaultAssets.cv} downloadTitle="CV Kientega Nourdine.pdf" label="Télécharger mon CV" />
+          <CVLink href={'cv/Kientega-Nourdine.pdf'} downloadTitle="CV Kientega Nourdine.pdf" label="Télécharger mon CV" />
           <CVLink href={'https://nourdine-kientega.github.io/cv/'} label="Voir mon CV en ligne" />
         </div>
 

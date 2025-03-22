@@ -1,7 +1,6 @@
 /////////////// Defaults uncategorizes assets ///////////
 import Logo from './logo.png';
 import Profil from './profil.jpg';
-import cv from './pdf/CV KIENTEGA Nourdina.pdf';
 import aboutImg from './profil.jpg';
 
 ///////////// Skills images //////////////
@@ -11,7 +10,6 @@ import React from './images/skills/atom.png';
 import React_native from './images/skills/science.png';
 import Nodejs from './images/skills/nodejs.png';
 import Totaljs from './images/skills/totaljs.png';
-// import MySQL from './images/skills/mysql.png';
 import PostgreSQL from './images/skills/postgresql.png';
 import MongoDB from './images/skills/database.png';
 import GitHub from './images/skills/github.png';
@@ -32,7 +30,7 @@ import Projet4 from './images/projects/portfolio4.jpg';
 import Projet5 from './images/projects/portfolio5.jpg';
 import Projet6 from './images/projects/portfolio6.jpg';
 
-export const DefaultAssets = { cv, Logo, Profil, aboutImg };
+export const DefaultAssets = { Logo, Profil, aboutImg };
 
 export const SkillsImages = { JavaScript, TypeScript, React, React_native, Nodejs, Totaljs, PostgreSQL, MongoDB, GitHub, Docker };
 

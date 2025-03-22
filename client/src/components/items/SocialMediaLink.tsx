@@ -1,4 +1,3 @@
-
 interface SocialMediaLinkProps {
     href: string;
     title: string;
@@ -6,8 +5,17 @@ interface SocialMediaLinkProps {
 };
 
 export const SocialMediaLink = ({ href, title, iconClassName }: SocialMediaLinkProps) => {
+
+    const API_URL = import.meta.env.VITE_API_URL;
+
+    const handleClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+
+        event.preventDefault();
+        window.open(`${API_URL}/${href}`, '_blank');
+    };
+
     return (
-        <a href={href} rel="noopener noreferrer" target="_blank" title={title}>
+        <a href={`https://portfolio/${href}`} rel="noopener noreferrer" target="_blank" title={title} onClick={handleClick}>
             <i className={iconClassName}></i>
         </a>
     )

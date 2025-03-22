@@ -13,7 +13,7 @@ export const ContactSection = () => {
 
   const handleChange = (e: any) => {
 
-    const { name , value} = e.target;
+    const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
@@ -23,21 +23,23 @@ export const ContactSection = () => {
     setLoading(true);
     setNotification(null);
 
+    const API_URL = import.meta.env.VITE_API_URL;
+
     try {
-      const response = await fetch('/api/contact/', {
+      const response = await fetch(`${API_URL}/contact/`, {
         headers: { 'Content-Type': 'application/json' },
         method: 'POST',
         body: JSON.stringify(formData),
       });
 
 
-      if(response.ok) {
+      if (response.ok) {
         setNotification({
           type: 'success',
           title: 'Merci de m\'avoir contacté !',
           description: 'Votre message a été envoyé avec succès, Vous recevrez une réponse dès que possible.',
         });
-      }else {
+      } else {
         // const errorText = await response.text();
         // console.error('Server error:', response);
         setNotification({
@@ -46,7 +48,7 @@ export const ContactSection = () => {
           description: 'Une erreur est survenue lors de l\'envoi de votre message. Veuillez réessayer.',
         });
       }
-      
+
     } catch (error) {
       console.error('Network error:', error);
       setNotification({
@@ -72,7 +74,7 @@ export const ContactSection = () => {
         </div>
       )}
 
-{notification && (
+      {notification && (
         <div className="overlay">
           <PanelComponent
             type={notification.type}
