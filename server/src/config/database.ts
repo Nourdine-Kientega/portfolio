@@ -9,6 +9,7 @@ const dbConnection = new Client({
     port: process.env.DB_PORT ? parseInt(process.env.DB_PORT, 10) : undefined,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
+    ssl: { rejectUnauthorized: false } // enable ssl connexion
 });
 
 (async () => {
