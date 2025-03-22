@@ -1,9 +1,9 @@
 import cors from 'cors';
 import express from 'express';
-import { contactRouter } from './src/routes/contactRoutes';
 import * as dotenv from 'dotenv';
-import { socialMediaRouter } from './src/routes/socialMediaRoutes';
-import { createTables } from './src/models/contactModel';
+import { createTables } from './models/contactModel';
+import { contactRouter } from './routes/contactRoutes';
+import { socialMediaRouter } from './routes/socialMediaRoutes';
 
   
 // creates articles table if not exist

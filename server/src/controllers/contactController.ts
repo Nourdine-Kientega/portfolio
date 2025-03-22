@@ -1,7 +1,8 @@
 import dbConnection from "../config/database";
 import { sendMail } from "../services/mailService";
+import { Request, Response } from 'express';
 
-export const sendContactMessage = async (req, res) => {
+export const sendContactMessage = async (req: Request, res: Response) => {
 
     const { firstname, lastname, email, subject, message } = req.body;    
     

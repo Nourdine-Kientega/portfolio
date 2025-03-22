@@ -1,9 +1,10 @@
 
 import dotenv from 'dotenv';
+import { Request, Response } from 'express';
 
 dotenv.config();
 
-export const socialMediaRedirect = (req, res) => {
+export const socialMediaRedirect = (req: Request, res: Response) => {
 
     const platform: string = req.params.platform;
     const redirectsLinks: Record<string, string | undefined> = {
@@ -13,8 +14,8 @@ export const socialMediaRedirect = (req, res) => {
     };
 
     if(redirectsLinks[platform]) {
-        return res.redirect(redirectsLinks[platform]!);
+        res.redirect(redirectsLinks[platform]!);
     } else {
-        return res.status(404).send("Page Not Found");
+        res.status(404).send("Page Not Found");
     }
 };

@@ -1,2 +1,9 @@
+
+# Node modules
 node_modules
+
+# Local env 
 .env
+
+# Compile dist files
+dist/
