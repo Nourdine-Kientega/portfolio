@@ -15,7 +15,7 @@ export const SocialMediaLink = ({ href, title, iconClassName }: SocialMediaLinkP
     };
 
     return (
-        <a href={`https://portfolio/${href}`} rel="noopener noreferrer" target="_blank" title={title} onClick={handleClick}>
+        <a href={`https://portfolio.com/${href}`} rel="noopener noreferrer" target="_blank" title={title} onClick={handleClick}>
             <i className={iconClassName}></i>
         </a>
     )
