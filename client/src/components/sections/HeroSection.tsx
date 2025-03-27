@@ -20,9 +20,10 @@ export const HeroSection = () => {
 
         {/* Social media links */}
         <div className="social-media">
-          <SocialMediaLink href={`socialmedia/facebook/`} title="Facebook" iconClassName="bx bxl-facebook" />
-          <SocialMediaLink href={`socialmedia/whatsapp/`} title="WhatsApp" iconClassName="bx bxl-whatsapp" />
-          <SocialMediaLink href={`socialmedia/linkedin/`} title="LinkedIn" iconClassName="bx bxl-linkedin" />
+          <SocialMediaLink href={`facebook/`} title="Facebook" iconClassName="bx bxl-facebook" />
+          <SocialMediaLink href={`whatsapp/`} title="WhatsApp" iconClassName="bx bxl-whatsapp" />
+          <SocialMediaLink href={`linkedin/`} title="LinkedIn" iconClassName="bx bxl-linkedin" />
+          <SocialMediaLink href={`github/`} title="GitHub" iconClassName="bx bxl-github" />
         </div>
 
         {/* cv links */}

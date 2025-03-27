@@ -5,7 +5,7 @@ import { createTables } from './models/contactModel';
 import { contactRouter } from './routes/contactRoutes';
 import { socialMediaRouter } from './routes/socialMediaRoutes';
 
-  
+
 // creates articles table if not exist
 createTables();
 

@@ -3,28 +3,28 @@ import { ProjectItem } from "../items/ProjectItem";
 
 export const ProjectsSection = () => {
     // Project data with fake data
-const projects = [
-    {
-      src: ProjectsImages.Projet1,
-      alt: "Portfolio 1",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam eum aliquid sint?",
-      title: "Mon bulletin",
-      link: "#"
-    },
-    {
-      src: ProjectsImages.Projet5,
-      alt: "Portfolio 5",
-      description: "An interactive project that shows how to build a RESTful API with Node.js and Express.",
-      title: "RESTful API",
-      link: "#"
-    },
-    {
-      src: ProjectsImages.Projet6,
-      alt: "Portfolio 6",
-      description: "A mobile application for managing to-do lists and reminders, built with React Native.",
-      title: "To-Do App",
-      link: "#"
-    }
+    const projects = [
+      {
+        src: ProjectsImages.Projet1,
+        alt: "Portfolio 1",
+        description: "Cette application permet de calculer rapidement les moyennes des élèves grâce à une interface simple et intuitive.",
+        title: "Mon bulletin",
+        link: "#"
+      },
+      {
+        src: ProjectsImages.Projet5,
+        alt: "Portfolio 5",
+        description: "Un projet interactif qui montre comment construire une API RESTful avec Node.js et Express.",
+        title: "API RESTful",
+        link: "#"
+      },
+      {
+        src: ProjectsImages.Projet6,
+        alt: "Portfolio 6",
+        description: "Une application mobile pour gérer des listes de tâches et des rappels, construite avec React Native.",
+        title: "To-Do App",
+        link: "#"
+      }
   ];
 
   return (

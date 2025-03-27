@@ -10,7 +10,8 @@ export const socialMediaRedirect = (req: Request, res: Response) => {
     const redirectsLinks: Record<string, string | undefined> = {
         facebook: process.env.FACEBOOK_URL,
         whatsapp: process.env.WHATSAPP_URL,
-        linkedin: process.env.LINKEDIN_URL
+        linkedin: process.env.LINKEDIN_URL,
+        github: process.env.GITHUB_URL
     };
 
     if(redirectsLinks[platform]) {
