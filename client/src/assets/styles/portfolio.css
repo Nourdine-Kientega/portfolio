@@ -66,9 +66,9 @@ span { color: var(--main-color); }
 
 .skills h2 { margin-bottom: 5rem; }
 .skills p { font-size: 1.6rem; margin: 1rem 0 3rem; text-align: center; }
-.skills-container { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; width: 60%; min-height: 400px; padding: 4rem; gap: 5.5rem; margin: auto; margin-top: 5rem; background: var(--second-bg-color); max-height: 400px; overflow-y: scroll; }
+.skills-container { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; width: 86%; min-height: 400px; padding: 4rem; gap: 5.5rem; margin: auto; margin-top: 5rem; background: var(--second-bg-color); }
 .skills-container::-webkit-scrollbar { display: none; }
-.skills-container .skills-box { width: 18%; height: 18%; display: flex; flex-direction: column; align-items: center; gap: 1rem; border-radius: 3px; box-shadow: 0 0 8px 20px rgba(0, 0, 0, .2); background: var(--bg-color); padding: 1rem; transition: all .5s ease-in-out; }
+.skills-container .skills-box { width: 12%; height: 12%; display: flex; flex-direction: column; align-items: center; gap: 1rem; border-radius: 3px; box-shadow: 0 0 8px 20px rgba(0, 0, 0, .2); background: var(--bg-color); padding: 1rem; transition: all .5s ease-in-out; }
 .skills-container .skills-box:hover { transform: scale(1.1);  border: 1px solid var(--main-color); box-shadow: none; }
 .skills-container .skills-box img { width: 65%; height: 65%; }
 .skills-container .skills-box img.rounded { border-radius: .7rem; }
